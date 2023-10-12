@@ -18,7 +18,7 @@ boolean power_module = false;
 
 
 
-const char* ssid = "Varad's G82";  //Enter you Wifi SSID here
+const char* ssid = "Varad's G82";  //Enter your Wifi SSID here
 
 const char* password = "123456789"; //Enter your password here
 
@@ -31,14 +31,14 @@ ESP8266WebServer server(80);
 
 String mainPage = ""; //The default page
 
-String feedback = ""; //Gives staus of the switch
+String feedback = ""; //Gives status of the switch
 
 String currentPage = ""; //Combines main and feedback page
 
 
-int GPIO_0 = 0; //Pin defanition
+int GPIO_0 = 0;
 
-int GPIO_2 = 2; //Pin defanition
+int GPIO_2 = 2; 
 
 
 void setup(void){
@@ -253,7 +253,7 @@ void loop(void){
   server.handleClient();
 
 
-  if (digitalRead(GPIO_0==HIGH) && power_module==true)
+  if (digitalRead(GPIO_0 == HIGH) && power_module==true)
 
   trigger_sms=true;
 
